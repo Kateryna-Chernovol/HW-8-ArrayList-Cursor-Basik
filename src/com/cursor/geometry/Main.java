@@ -28,17 +28,15 @@ public class Main {
         }
         System.out.println("\n");
 
-        System.out.println("2. Swap \"Orange\" & \"Grapefruit\" if present");
+        System.out.println("2. Replace \"Orange\" with \"Grapefruit\" if present");
         List<String> fruits = new ArrayList<>();
         fruits.add("Orange");
         fruits.add("Apple");
-        fruits.add("Grapefruit");
+        fruits.add("Peach");
         System.out.println(fruits);
-        int aElement = fruits.indexOf("Orange");
-        int bElement = fruits.indexOf("Grapefruit");
-        //
-        if (fruits.contains("Orange") && fruits.contains("Grapefruit")) {
-            Collections.swap(fruits, aElement, bElement);
+        if (fruits.contains("Orange")) {
+            int orangeIndex = fruits.indexOf("Orange");
+            fruits.set(orangeIndex, "Grapefruit");
         } else {
             System.out.println("Value not present");
         }
